@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Planificador 2026</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+	<div class="global-tools">
+		<button class="theme-toggle" type="button" data-theme-toggle aria-label="Cambiar tema" title="Cambiar tema">
+			<i class="fa-solid fa-moon" aria-hidden="true"></i>
+			<span data-theme-label>Tema oscuro</span>
+		</button>
+	</div>
+
+	<div class="auth-layout">
+		<section class="intro-panel">
+			<p class="eyebrow">Actividad 4 - PISWD</p>
+			<h1>Calendario y actividades con urgencias claras</h1>
+			<p class="intro-copy">
+				Carga actividades por fecha, mira cuales estan mas cerca en rojo, amarillo y verde,
+				y usa una calculadora desplegable con historial dentro de la misma app.
+			</p>
+			<div class="intro-notes">
+				<p><i class="fa-regular fa-calendar-check" aria-hidden="true"></i>Agenda visual con foco semanal</p>
+				<p><i class="fa-solid fa-list-check" aria-hidden="true"></i>Lista ordenada por cercania real</p>
+				<p><i class="fa-solid fa-calculator" aria-hidden="true"></i>Calculadora con historial completo</p>
+			</div>
+		</section>
+
+		<section class="auth-card">
+			<div class="auth-tabs" role="tablist" aria-label="Formularios de acceso">
+				<button id="tab-login" class="auth-tab is-active" type="button" role="tab" aria-selected="true">Ingresar</button>
+				<button id="tab-register" class="auth-tab" type="button" role="tab" aria-selected="false">Registrarme</button>
+			</div>
+
+			<p id="auth-message" class="auth-message" aria-live="polite"></p>
+
+			<form id="login-form" class="auth-form" autocomplete="on">
+				<label class="field-label" for="login-email">Email</label>
+				<input id="login-email" name="email" type="email" required placeholder="tuemail@mail.com">
+
+				<label class="field-label" for="login-password">Clave</label>
+				<input id="login-password" name="password" type="password" required minlength="6" placeholder="********">
+
+				<button class="submit-btn" type="submit">Entrar al dashboard</button>
+			</form>
+
+			<form id="register-form" class="auth-form is-hidden" autocomplete="on">
+				<label class="field-label" for="register-name">Nombre</label>
+				<input id="register-name" name="name" type="text" required maxlength="120" placeholder="Tu nombre">
+
+				<label class="field-label" for="register-email">Email</label>
+				<input id="register-email" name="email" type="email" required placeholder="tuemail@mail.com">
+
+				<label class="field-label" for="register-password">Clave</label>
+				<input id="register-password" name="password" type="password" required minlength="6" placeholder="Minimo 6 caracteres">
+
+				<label class="field-label" for="register-password-confirm">Confirmar clave</label>
+				<input id="register-password-confirm" name="password_confirm" type="password" required minlength="6" placeholder="Repeti tu clave">
+
+				<button class="submit-btn" type="submit">Crear usuario</button>
+			</form>
+		</section>
+	</div>
+
+	<script src="js/theme.js" defer></script>
+	<script src="js/main.js" defer></script>
+</body>
+</html>
