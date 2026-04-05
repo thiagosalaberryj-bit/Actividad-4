@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS operaciones (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  operando1 DOUBLE NOT NULL,
+  operando2 DOUBLE NOT NULL,
+  operador VARCHAR(1) NOT NULL,
+  resultado DOUBLE NOT NULL
+);
